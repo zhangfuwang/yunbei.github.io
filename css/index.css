@@ -1,0 +1,189 @@
+/*产品服务*/
+.product{
+	margin: 0;
+	background: #F7F7F7;
+	padding-top: 4%;
+	padding-bottom: 8%;
+}
+h1{
+	color: #424242;
+	text-align: center;
+	letter-spacing:5px;
+}
+.product .hr{
+	width:3%;
+	height: 5%;
+	border: 2px solid #0071CA;
+	/*margin-left: 30%;*/
+	text-align: center;
+	margin: 0 auto;
+}
+.product .click_on{
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding:5%;
+}
+.product .click_on .prev{
+	position: absolute;
+	left:3%;
+	top: 50%;
+	transform: scaleX(-50%);
+}
+.product .click_on .prev a{
+	width: 5%;
+	display: block;
+}
+.product .click_on .next a{
+	width: 5%;
+	display: block;
+}
+.product .click_on .next{
+	position: absolute;
+	top: 50%;
+	transform: scaleX(-50%);
+	right: 3%;
+}
+.product .click_on .content ul{
+	
+}
+.product .click_on .content ul li{
+	
+	float: left;
+	width: 30%;
+	margin: 0 1.666666%;
+	text-align: center;
+	background: white;
+	border: 1px solid #EDEDED;
+}
+.product .click_on .content ul li img{
+	width: 30%;
+	text-align: center;
+	margin:15% 0 10% 0;
+}
+.product .click_on .content ul li h3{
+	color: #343434;
+	font-size:150%;
+	margin-bottom:8%;
+}
+.product .click_on .content ul li  p{
+	padding: 0 5%;
+	font-size: 120%;
+}
+.product .click_on .content ul li #xq{
+	margin-top: 10%;
+	padding:15% 0;
+	background: #F5F5F5;
+}
+.product .click_on .content ul li #xq a{
+
+	color: #A7A7A7;
+	font-size: 110%;
+}
+.product .click_on .content ul li span{
+	
+	display: inline-block;
+	width: 30%;
+	height: auto;
+
+	margin: 10% 0 5% 0;
+	border: 1px solid #4A8BC3;
+	padding: 8% 0;
+	border-radius:50%;
+}
+.product .click_on .content ul li span:after{
+	content: " ";
+	display: block;
+	padding-bottom: 40%;
+}
+.product .click_on .content ul li:nth-child(1) span{
+	background: url(../images/lanseduanxin.png) no-repeat center center;
+	background-size:50% auto;
+}
+.product .click_on .content ul li:nth-child(2) span{
+	background: url(../images/lansedengpao.png) no-repeat center center;
+	background-size:50% auto;
+}
+.product .click_on .content ul li:nth-child(3) span{
+	background: url(../images/lansehuiyuan.png) no-repeat center center;
+	background-size:50% auto;
+}
+
+
+.product .click_on .content ul li:nth-child(1).active{
+	box-shadow:0 20px 20px -5px #969696;
+}
+.product .click_on .content ul li:nth-child(1) #xq a.active{
+	color:#0071C9;
+}
+.product .click_on .content ul li:nth-child(1) span.active{
+	background: url(../images/baiseduanxin.png) no-repeat #2B78BC center center;
+	background-size:60% ;
+}
+.product .click_on .content ul li:nth-child(2).active{
+	box-shadow:0 20px 20px -5px #969696;
+}
+.product .click_on .content ul li:nth-child(2) #xq a.active{
+	color:#0071C9;
+}
+.product .click_on .content ul li:nth-child(2) span.active{
+	background: url(../images/baisetognzhi.png) no-repeat #2B78BC center center;
+	background-size:60% ;
+}
+.product .click_on .content ul li:nth-child(3).active{
+	box-shadow:0 20px 20px -5px #969696;
+}
+.product .click_on .content ul li:nth-child(3) #xq a.active{
+	color:#0071C9;
+}
+.product .click_on .content ul li:nth-child(3) span.active{
+	background: url(../images/baisehuiyuan.png) no-repeat #2B78BC center center;
+	background-size:60% ;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:960px) {
+	.product .click_on .prev img{
+		width: 10% auto;
+	}
+	.product .click_on .next img{
+		width: 10% auto;
+	}
+	.product .click_on .content ul li h3{
+		font-size:120%;
+	}
+	.product .click_on .content ul li  p{
+		font-size: 100%;
+	}
+	.product .click_on .content ul li #xq a{
+		color: #A7A7A7;
+		font-size: 90%;
+	}
+}
+@media screen and (max-width:768px) {
+	.product .click_on .prev img{
+		width: 5% auto;
+	}
+	.product .click_on .next img{
+		width: 5% auto;
+	}
+	.product .click_on .content ul li h3{
+		font-size:100%;
+	}
+	.product .click_on .content ul li  p{
+		font-size: 60%;
+	}
+	.product .click_on .content ul li #xq a{
+		color: #A7A7A7;
+		font-size: 60%;
+	}
+}
+

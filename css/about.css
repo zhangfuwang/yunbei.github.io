@@ -1,0 +1,201 @@
+/*企业简介*/
+.text-introduce{
+    text-indent: 2rem;
+    margin-top: 3% ;
+    margin-bottom: 5%;
+    font-size: 168%;
+    color: #666;
+    line-height: 2rem;
+}
+
+
+/*企业文化*/
+#culture{
+    padding: 5% 0;
+    background-color: #f7f7f7;
+}
+#culture .dropdown{
+    width: 20%;
+    margin: auto;
+    margin-top:-8.8%;
+}
+.culture{
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+.culture .culture-list{
+    width: 23.3333%;
+    margin: 4% 5%;
+    float: left;
+}
+.culture:after{
+content: "";
+display: table;
+clear: both;
+}
+.culture-list>div{
+width: 50%;
+margin: 0 auto;
+}
+.culture-list>h4{
+font-weight: 600;
+}
+.culture-list img{
+width: 100%;
+margin: 0 auto;
+}
+
+
+
+/*运营商*/
+#operator .culture-list{
+    width: 23.3333%;
+    margin: 4% 5%;
+    float: left;
+}
+#operator:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#operator p{
+    margin: 5% 0;
+}
+
+
+/*平台*/
+#platform{
+    background-color: #f7f7f7;
+    padding: 5% 0;
+}
+#platform .hr {
+    width: 3%;
+    height: 5%;
+    border: 2px solid #0071CA;
+    /* margin-left: 30%; */
+    text-align: center;
+    margin: 0 auto;
+}
+#platform .dropdown{
+    width: 20%;
+    margin: auto;
+    margin-top:-8.8%;
+}
+.platform{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:5%;
+    position: relative;
+}
+.platform-list{
+    width: 15%;
+    margin: 0 5%;
+    float: left;
+}
+.platform-list>div{
+    width: 50%;
+    margin: 0 auto;
+}
+.platform-list img{
+    max-width: 100%;
+}
+.platform-list p {
+    margin: 5% auto;
+
+}
+
+
+
+
+
+
+
+
+/*联系我们*/
+#callMe{
+    padding: 5% 0;
+}
+#callMe .dropdown{
+    width: 20%;
+    margin: auto;
+    margin-top:-8.8%;
+}
+#callMe .hr{
+    width:3%;
+    height: 5%;
+    border: 2px solid #0071CA;
+    /*margin-left: 30%;*/
+    text-align: center;
+    margin: 0 auto;
+}
+#contact{
+    max-width: 1200px;
+    color: #ffffff;
+    /*padding: 5% 2%;*/
+    margin: 3% auto;
+
+}
+#contact:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+div.contact-list {
+    width: 20%;
+    margin: 2.5%;
+    border-radius: 5px;
+    float: left;
+    padding: 2%;
+    height:0;
+    padding-bottom:20%;
+    word-wrap:break-word;
+}
+div.contact-list:first-child{
+    background-color: #629fd1;
+    box-shadow: 0 5px 5px 2px rgba(98, 159, 209, .3);
+}
+div.contact-list:nth-child(2){
+    background-color: #fca862;
+    box-shadow: 0 5px 5px 2px rgba(252, 168, 98, .3);
+}
+div.contact-list:nth-child(3){
+    background-color: #9a5afa;
+    box-shadow: 0 5px 5px 2px rgba(154, 90, 250, .3);
+}
+div.contact-list:last-child{
+    background-color: #fc5682;
+    box-shadow: 0 5px 5px 2px rgba(252, 86, 130, .3);
+}
+div.contact-list>div{
+    width: 30%;
+    margin: 20% auto;
+}
+
+
+@media screen and (max-width: 960px) {
+    h4{
+        font-size:133.33% ;
+    }
+    .text-introduce {
+        font-size: 130%;
+    }
+    div.contact-list {
+
+        min-height: 224px;
+        font-size: 85%;
+    }
+}
+@media screen and (max-width: 768px){
+    .text-introduce {
+        font-size: 100%;
+    }
+    h4{
+        font-size: 100%;
+    }
+    div.contact-list {
+
+        min-height: 186px;
+
+    }
+}

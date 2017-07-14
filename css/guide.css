@@ -1,0 +1,11 @@
+nav{
+    transition:0s;
+    background:black;
+    opacity: 1;
+
+}
+nav.active{
+    transition:0s;
+    background:black;
+    opacity: 1;
+}

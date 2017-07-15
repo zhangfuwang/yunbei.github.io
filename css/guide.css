@@ -62,26 +62,26 @@ nav.active {
 #leftNav span a{
     color: #666;
 }
-#leftNav span a.active{
+#leftNav span.active a{
     color: #0070c9;
 }
 
-#leftList{
+.leftList{
 
 }
-#leftList li{
+.leftList li{
     margin: 10% 0;
 }
 
-#leftList li.active{
+.leftList li.active{
     border-left: 5px solid #0070c9;
     /*padding-left: 10%;*/
 
 }
-#leftList li.active a{
+.leftList li.active a{
     color: #0070c9;
 }
-#leftList li a{
+.leftList li a{
     color: #666;
     font-size: 120%;
     padding-left: 12%;

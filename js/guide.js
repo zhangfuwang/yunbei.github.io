@@ -66,3 +66,30 @@ $(function(){
 })/**
  * Created by Administrator on 2017/7/14.
  */
+//if(!window.jQuery){
+//    throw new Error('9.js插件库依赖于jQuery！');
+//}
+$(" #leftList li a").click(function(e){
+        e.preventDefault();
+        //this =>  a
+        //修改a的父元素li上的active
+        $(this).parent().addClass('active').siblings('.active').removeClass('active');
+
+        //根据a的href属性值(id)选择要显示的div
+        var id = $(this).attr('href'); //'#tc20'
+        $(id).addClass('active').siblings('.active').removeClass('active');
+    });
+$(" #leftList li a").click(function(e){
+    e.preventDefault();
+    //this =>  a
+    //修改a的父元素li上的active
+    $(this).parent().addClass('active').siblings('.active').removeClass('active');
+
+    //根据a的href属性值(id)选择要显示的div
+    var id = $(this).attr('href'); //'#tc20'
+    $(id).addClass('active').siblings('.active').removeClass('active');
+});
+
+//$(function(){
+//    $('[data-toggle="tab"]').tab();
+//})

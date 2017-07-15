@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/publicAll.css"/>
+    <link rel="stylesheet" type="text/css" href="css/guide.css"/>
     <title></title>
 
 </head>
@@ -16,10 +17,10 @@
                 <img src="images/login.png"/>
             </div>
             <ul class="nav_ul">
-                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="index.html">首页</a></li>
                 <li><a href="column.html">产品服务</a></li>
                 <li><a href="about.html">关于云贝</a></li>
-                <li><a href="guide.html">接入指南</a></li>
+                <li><a href="guide.html" class="active">接入指南</a></li>
                 <li class="visible-xs">X</li>
             </ul>
             <form action="">
@@ -36,10 +37,136 @@
             </div>
         </div>
     </nav>
-
+ class="bg-gray"
 
     <section id="main" style="min-height: 2000px">
+        <div id="top">
+            <h1>接入教程</h1>
+            <div class="hr"></div>
+        </div>
+        <div id="center">
+            <div id="left">
+                <div id="leftNav" class="text-center">
+                    <span ><a href="#leftList" class="active">接入教程</a></span>
+                    丨
+                    <span class=""><a href="#leftList1">平台操作</a></span>
+                </div>
+                <ul id="leftList" class="display-none active">
+                    <li class="active"><a href="#right1" >普通短信发送</a></li>
+                    <li><a href="#right2">状态码说明</a></li>
+                    <li><a href="#right3">短信接收</a></li>
+                    <li><a href="#right4">获取状态报告</a></li>
+                    <li><a href="#right5">查询余额</a></li>
+                </ul>
+                <ul id="leftList1" class="display-none">
+                    <li><a href="#right1" class="active">普通短信发送</a></li>
+                    <li><a href="#right2">状态码说明</a></li>
+                    <li><a href="#right3">短信接收</a></li>
+                    <li><a href="#right4">获取状态报告</a></li>
+                    <li><a href="#right5">查询余额</a></li>
+                </ul>
+            </div>
+            <div id="right" >
+                <div id="right1"  class="display-none active" >
+                    <h1>普通短信发送</h1>
+                    <p>用户在遵循HTTP或者HTTPS协议的前提下，可通过GET和POST方式提交短信发送请求      </p>
+                    <h2>短信提交地址</h2>
+                    <p>短信可以提交不超过2000手机号码，每个号码用英文逗号间隔。(一次提交发送超过50 机号码，请使用POST请求)</p>
+                    <p>URL地址为：http://yunbei.com/sms/send  https:yunbei.com/sms/send</p>
 
+                    <table class="table-container" id="parameter">
+                        <thead>
+                        <tr>
+                            <th>参数名</th>
+                            <th>参数字段</th>
+                            <th>参数说明</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>uid</td>
+                            <td>用户账号</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>pwd</td>
+                            <td>用户密码</td>
+                            <td>小写32位MD5加密</td>
+                        </tr>
+                        <tr>
+                            <td>mobile</td>
+                            <td>接受号码</td>
+                            <td>
+                                <div>同时发送给多个号码时，号码之间用英文半角逗号分隔(,) 如:13972827282,13072827282 </div>
+                                <p>GET  方式每次最多可以提交50条号码</p>
+                                <p>POST 方式每次最多可以提交2000条号码 <span>[建议用POST方式提交]</span></p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>content</td>
+                            <td>短信内容</td>
+                            <td>
+                                <div>发送内容需要进行URL字符标准化转码</div>
+                                <p> URL字符编码说明:</p>
+                                <p>返回字符串，此字符串中除了-_.之外的所有非字母数字字符都将被替换成百分号( % )后跟两位十六进制数，空格则编码为加号( + )</p>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h1>状态码说明</h1>
+                    <table id="status" class="text-center">
+                        <tbody>
+                        <tr>
+                            <td class="bg-gray">100</td>
+                            <td class="bg-gray">发送超过</td>
+                            <td>101</td>
+                            <td>验证失败</td>
+                            <td class="bg-gray">102</td>
+                            <td class="bg-gray">短信不足</td>
+                        </tr>
+                        <tr>
+                            <td>104</td>
+                            <td>非法字符</td>
+                            <td class="bg-gray">105</td>
+                            <td class="bg-gray">内容过多</td>
+                            <td>106</td>
+                            <td>号码过多</td>
+                        </tr>
+                        <tr>
+                            <td class="bg-gray">108</td>
+                            <td class="bg-gray">号码内容为空(用了UTF_8，不支持改为GBK即可)</td>
+                            <td>109</td>
+                            <td>账号冻结</td>
+                            <td class="bg-gray">110</td>
+                            <td class="bg-gray">禁止频繁单条发送</td>
+                        </tr>
+                        <tr>
+                            <td>112</td>
+                            <td>子号不正确</td>
+                            <td class="bg-gray">120</td>
+                            <td class="bg-gray">系统升级</td>
+                            <td>103</td>
+                            <td>操作失败</td>
+                        </tr>
+                        <tr>
+                            <td class="bg-gray">107</td>
+                            <td class="bg-gray">频率过快</td>
+                            <td>111</td>
+                            <td>系统暂停发送</td>
+                            <td class="bg-gray"></td>
+                            <td class="bg-gray"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="right2"  class="display-none">2</div>
+                <div id="right3"  class="display-none">3</div>
+                <div id="right4"  class="display-none">4</div>
+                <div id="right5"  class="display-none">5</div>
+            </div>
+        </div>
     </section>
 
 
@@ -53,7 +180,7 @@
                 <p><img src="images/dianhua (2).png"/>0551-63838275</p>
                 <input type="text" placeholder="E-mail"/><button><a href="#">发送</a></button>
             </div>
-            <div class="right">
+            <div class="right ">
                 <table border="" cellspacing="" cellpadding="">
                     <tr>
                         <th>应用场景</th>
@@ -108,6 +235,8 @@
 <script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/guide.js" type="text/javascript" charset="utf-8"></script>
-
+    <script>
+//        $(" #leftList li a").tab();
+    </script>
 </body>
 </html>

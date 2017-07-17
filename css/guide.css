@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+html{
+    font-family:"Microsoft YaHei" ;
+}
 /*µ¼º½*/
 nav{
     transition:0s;
@@ -97,18 +100,29 @@ nav.active {
 }
 #right h1{
     text-align: left;
+    font-size: 170%;
+    font-weight: bold;
+    color: #333;
 }
 #right p{
     color: #666;
-    font-size: 110%;
+    font-size: 115%;
+}
+#right h2{
+    font-size: 128%;
+    font-weight: 900;
+    color: #333;
 }
 #parameter{
-
+    font-size: 128%;
 }
 
 #parameter thead{
     background-color:#ccc ;
 }
+/*#parameter thead th{*/
+   /**/
+/*}*/
 #parameter thead th:nth-child(1){
     width: 10%;
     text-align: center;
@@ -133,11 +147,12 @@ nav.active {
     word-wrap:break-word;
 }
 #parameter tr td p{
-    color: #e4393c;
+    color: #ed4e4e;
     margin-bottom: 2px;
+    font-size: 100%;
 }
 #parameter tr td p span{
-    color: #0071C9;
+    color: #3b82e2;
 }
 #parameter tr td div{
     margin-bottom: 5%;
@@ -153,17 +168,18 @@ nav.active {
 #status{
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
-    color: #0071C9;
-    font-size: 120%;
+    color: #526fb3;
+
 }
 #status td{
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     width: 16.6%;
-    padding: 2%;
+    padding: 2% 1%;
+    font-size: 128%;
 }
 #status tr:nth-child(3) td:nth-child(2){
-    font-size: 80%;
+    font-size: 100%;
     padding: 0;
 }
 .bg-gray{

@@ -58,13 +58,14 @@ nav.active {
     padding: 6% 0;
     font-size: 140%;
     border-bottom: 1px solid #ddd;
+
 }
 #leftNav span a{
     color: #666;
+    font-weight: 900;
+
 }
-#leftNav span.active a{
-    color: #0070c9;
-}
+
 
 .leftList{
 
